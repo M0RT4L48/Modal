@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://kit.fontawesome.com/725c679a77.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img src="imagenes/logo.jpg" alt="">
+    </header>
+    <div class="contenedor">
+        <section>
+        <div class="izq">
+            <h3>Our Team</h3>
+            <h1>A Dedicated Team of Experts</h1> <br>
+            <p>Passion, experience and a fierce commitment to education are
+                the cornerstones of our success in the beauty industry</p> <br>
+            <p>We Wieve that being the largest SPA in the area is not enough in itself to satisfy the
+                needs of our customers. For this reason we have built up a staff of specialized
+                professionals who are proud to welcome you to our hotel, present What We Do, listen
+                to your needs and guarantee well-being and relaxation during your stay at our SPA
+                Resort.</p> <br>
+            <p>Everyone in our team is a certified specialist capable of delivering a unique service of
+                high quality you won't find anywhere else in modem spa and resort industry.</p> <br>
+            <div class="btn">
+            <a href="#" class="btncolor">LEARN MORE</a>
+            <a href="#" class="blanco">VIEW ALL TEAM</a>
+        </div>
+        </div>
+        </section>
+        
+        <figure>
+            <div class="center">
+                <div>
+                    <img src="imagenes/foto1.jpg" alt="">
+                    <h3>Jessica Cooper</h3>
+                    <p>Esthetician</p>
+                    <div class="icons">
+                        <i class="fa-brands fa-facebook-f" style="color: #295b65;"></i>
+                        <i class="fa-brands fa-twitter" style="color: #295b65;"></i>
+                        <i class="fa-brands fa-pinterest" style="color: #295b65;"></i>
+                    </div>
+                    <a href="#" class="btncolor abrirform" >GET IN TOUCH</a>
+                </div>
+                
+                <div>
+                    <img src="imagenes/foto2.jpg" alt="">
+                    <h3>Robert Wagner</h3>
+                    <p>Hairdresser</p>
+                    <div class="icons">
+                        <i class="fa-brands fa-facebook-f" style="color: #295b65;"></i>
+                        <i class="fa-brands fa-twitter" style="color: #295b65;"></i>
+                        <i class="fa-brands fa-pinterest" style="color: #295b65;"></i>
+                    </div>
+                    <a href="#" class="btncolor abrirform">GET IN TOUCH</a>
+                </div>
+            </div>
+        </figure>
+        
+    </div>
+<footer>
+
+</footer>
+    
+
+<!-- formulario -->
+<div class="formulario" id="contform">
+
+    <div class="cerrar">
+      <i class="fa-solid fa-circle-xmark" id="cerrarform"></i>
+    </div>
+    <form action="">
+      <h1>Contact Us</h1>
+      <p><span>If you have any questions concerning our services, please fill out the
+          contact form below.</span></p>
+      <input type="text" placeholder="Name *">
+      <input type="email" placeholder="E-mail *">
+      <input type="text" placeholder="Message *" class="inputmsg">
+      <a href="#" type="submit" class="btnsub">SUBMIT</a>
+    </form>
+  </div>
+
+  <script>
+
+    // abrir ventana
+
+    $(".abrirform").click(function () {
+      $("#contform").addClass("mostrar");
+    })
+
+    $("#cerrarform").click(function () {
+      $("#contform").removeClass("mostrar");
+    });
+
+    /* abrir con el tiempo */
+
+    function tiempo() {
+      $("#contform").addClass("mostrar")
+    }
+    setTimeout(tiempo, 5000);
+
+    /* cerrar ventana si clickea en otro lugar */
+
+    window.onclick = function (event) {
+      if (event.target == contform) {
+        $("#contform").removeClass("mostrar")
+      }
+    }
+
+    /* cerrar ventana si le da a scape */
+
+    document.addEventListener("keydown", function (event) {
+      if (event.target == "escape") {
+        $("#contform").removeClass("mostrar");
+      }
+    });
+
+  </script>
+</body>
+</html>
